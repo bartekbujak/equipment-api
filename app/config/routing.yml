@@ -1,0 +1,24 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+#equipment:
+#    resource: "@AppBundle/Controller/EquipmentController.php"
+#    prefix: /api/
+#    type: rest
+
+#api_equipment_add:
+#    type: rest
+#    prefix:       /api
+#    resource: "@AppBundle/Controller/EquipmentController.php"
+##    controller: AppBundle\Controller\EquipmentController::addAction
+#    methods:    [GET]
+#
+#api_equipment_show:
+#    path:       /api/equipment/show
+#    controller: App\Controller\BlogApiController::edit
+#    methods:    [GET]
+
+blog:
+    resource: "@AppBundle/Controller/EquipmentController.php"
+    type:     annotation
