@@ -93,7 +93,7 @@ class EquipmentManager {
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    protected function _addNewMachine($machine)
+    protected function _addNewMachine(Machine $machine)
     {
         if ($this->errors) {
             return false;
@@ -112,6 +112,16 @@ class EquipmentManager {
 
         if (count($errors) > 0) {
             $this->setErrors($errors);
+            return;
+        }
+
+        $exist = $this->em->getRepository(Machine::class)->findTermInSameDay(
+            $data->getName(),
+            $data->getDay()
+        );
+
+        if ($exist) {
+            $this->setErrors('Filled term is in use');
         }
 
     }

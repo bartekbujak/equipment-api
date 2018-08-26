@@ -4,6 +4,17 @@ namespace AppBundle\Repository;
 
 class MachineRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    public function findTermInSameDay($machineName, $day) {
+        $query = $this->createQueryBuilder('m');
+        $query->where("m.day =:day");
+        $query->andWhere("m.name =:machineName");
+        $query->setParameter('day', $day);
+        $query->setParameter('machineName', $machineName);
+
+        return $query->getQuery()->execute();
+    }
+
     /**
      * @param $data
      * @return mixed
