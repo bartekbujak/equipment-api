@@ -42,9 +42,7 @@ INSERT INTO `machines` (`id`, `name`, `day`, `hours`) VALUES
 (2, 'Machine 2', 'Wed', '06:00-14:00'),
 (3, 'Machine 3', 'Tue', '09:00-11:00'),
 (4, 'Machine 1', 'Thu', '06:00-10:00'),
-(5, 'Machine 4', 'Thu', '09:45-12:00'),
-(15, 'Machine 5', 'Tue', '03:21-07:30'),
-(16, 'Machine 51', 'Tue', '03:21-07:30');
+(5, 'Machine 4', 'Thu', '09:45-12:00');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -64,7 +62,7 @@ ALTER TABLE `machines`
 -- AUTO_INCREMENT dla tabeli `machines`
 --
 ALTER TABLE `machines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
