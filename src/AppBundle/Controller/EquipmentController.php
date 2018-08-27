@@ -52,7 +52,7 @@ class EquipmentController extends FOSRestController
      * @QueryParam(name="daysNumber", requirements="\d+", default="1")
      */
     public function showAction(ParamFetcher $fetcher)
-    {;
+    {
         $data = $fetcher->all();
         $equipmentManager = $this->get('app.equipment_manager');
         $terms = $equipmentManager->getTermsByData($data);
